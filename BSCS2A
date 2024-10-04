@@ -2,9 +2,9 @@
 
 class Vehicle {
     
-    private $name;    // The name of the vehicle
-    private $speed;   // The speed of the vehicle in km/h
-    private $mileage; // The mileage of the vehicle in km/l
+    private $name;   
+    private $speed;   
+    private $mileage; 
 
     public function __construct($name, $speed, $mileage) {
         $this->name = $name;
