@@ -1,0 +1,36 @@
+<?php
+
+class Vehicle {
+
+    protected $name;    
+    protected $speed;  
+    protected $mileage; 
+
+    // Constructor to initialize attributes
+    public function __construct($name, $speed, $mileage) {
+        $this->name = $name;
+        $this->speed = $speed;
+        $this->mileage = $mileage;
+    }
+
+    public function displayDetails() {
+        echo "Vehicle Name: " . $this->name . PHP_EOL;
+        echo "Speed: " . $this->speed . " km/h" . PHP_EOL;
+        echo "Mileage: " . $this->mileage . " km/l" . PHP_EOL;
+    }
+}
+
+class Bus extends Vehicle {
+    public function seating_capacity($capacity = 50) {
+        return $capacity;
+    }
+}
+
+$cityBus = new Bus("City Bus", 50, 5);
+$cityBus->displayDetails();
+echo "Seating Capacity: " . $cityBus->seating_capacity() . " passengers" . PHP_EOL;
+
+$schoolBus = new Bus("School Bus", 60, 6);
+echo "Seating Capacity: " . $schoolBus->seating_capacity(30) . " passengers" . PHP_EOL;
+
+?>
