@@ -1,0 +1,25 @@
+<?php
+
+class Vehicle {
+    
+    private $name;    // The name of the vehicle
+    private $speed;   // The speed of the vehicle in km/h
+    private $mileage; // The mileage of the vehicle in km/l
+
+    public function __construct($name, $speed, $mileage) {
+        $this->name = $name;
+        $this->speed = $speed;
+        $this->mileage = $mileage;
+    }
+
+    public function displayDetails() {
+        echo "Vehicle Name: " . $this->name . PHP_EOL;
+        echo "Speed: " . $this->speed . " km/h" . PHP_EOL;
+        echo "Mileage: " . $this->mileage . " km/l" . PHP_EOL;
+    }
+}
+
+$ferrariFXX = new Vehicle("2007 Ferrari FXX Evoluzione", 350, 8);
+$ferrariFXX->displayDetails();
+
+?>
